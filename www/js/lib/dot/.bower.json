@@ -1,0 +1,28 @@
+{
+  "name": "dot",
+  "version": "1.0.3",
+  "main": "dist/doT.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "build",
+    "dist/cdn",
+    "speed",
+    "test",
+    "*.md",
+    "AUTHORS.txt",
+    "Gruntfile.js",
+    "package.json"
+  ],
+  "devDependencies": {
+
+  },
+  "keywords": [
+    "template",
+    "fast",
+    "simple",
+    "templating"
+  ],
+  "homepage": "http://github.com/olado/doT"
+
+}

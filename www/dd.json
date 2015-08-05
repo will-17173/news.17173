@@ -1,0 +1,47 @@
+{
+    "status": 1,
+    "totalCount": 293163,
+    "data": [{
+        "newsID": 4002374,
+        "newsTitle": "\u7fa4\u82f1\u835f\u8403\u6218\u82cd\u7a79 \u300a\u4e5d\u5929\u4ed9\u5883\u300b\u5e2e\u4f1a\u73a9\u6cd5\u63ed\u79d8",
+        "newsClass": 1,
+        "channelCode": 10009,
+        "newsKindList": ["261594", "10019"],
+        "kindName": "\u4e5d\u5929\u4ed9\u5883",
+        "newsDate": "2015-08-05 11:32:18",
+        "newsLead": "\u3000\u3000\u201c\u65e5\u6708\u795e\u6559\u3001\u6587\u6210\u6b66\u5fb7\u3001\u6cfd\u88ab\u82cd\u751f\u3001\u5343\u79cb\u4e07\u8f7d\u3001\u4e00\u7edf\u6c5f\u6e56\u2026\u2026\u201d\u5e2e\u6d3e\u505a\u5230\u65e5\u6708\u795e\u6559\u8fd9\u4e48\u9738\u6c14\u5a01\u6b66\u624d\u53eb\u771f\u6b63\u7684\u725b...",
+        "newsPic": "http:\/\/i1.17173cdn.com\/z6mhfw\/2015\/news\/2015\/08\/05\/mj0805bs01.jpg!a-3-480x.jpg",
+        "isMulti": true,
+        "newsAuthor": "Jenifer",
+        "newsUrl": "http:\/\/news.17173.com\/content\/2015-08-05\/20150805113218066.shtml",
+        "haveVideo": false
+    }, {
+        "newsID": 4002340,
+        "newsTitle": "\u98ce\u6ce2\u4e0d\u5b9a\u68cd\u6b32\u5b9a \u4e5d\u9634\u65b099\u6b66\u5b66\u98ce\u6ce2\u68cd\u9996\u66dd",
+        "newsClass": 1,
+        "channelCode": 10009,
+        "newsKindList": ["128886", "10019"],
+        "kindName": "\u4e5d\u9634\u771f\u7ecf\u6700\u65b0\u6d88\u606f",
+        "newsDate": "2015-08-05 11:27:24",
+        "newsLead": "\u3000\u3000\u968f\u7740\u300a\u4e5d\u9634\u771f\u7ecf\u300b\u5e74\u5ea6\u53f2\u8bd7\u8d44\u6599\u7247\u201c\u6f5c\u9f99\u4e71\u4e16\u201d\u7684\u4e34\u8fd1\uff0c\u65b099\u957f\u68cd\u5957\u8def\u201c\u98ce\u6ce2\u68cd\u201d\u4e5f\u968f\u4e4b\u6d6e\u51fa\u6c34\u9762\u3002\u68cd\u662f\u5c11...",
+        "newsPic": "http:\/\/i1.17173cdn.com\/z6mhfw\/2015\/news\/2015\/08\/05\/mj0805bv01.jpg!a-3-480x.jpg",
+        "isMulti": true,
+        "newsAuthor": "Jenifer",
+        "newsUrl": "http:\/\/news.17173.com\/content\/2015-08-05\/20150805112724684.shtml",
+        "haveVideo": false
+    }, {
+        "newsID": 4002326,
+        "newsTitle": "\u5fae\u8f6f\u6b63\u5f0f\u53d1\u5e03\u300a\u5149\u73af\u6218\u4e892\u300b \u660e\u5e74\u79cb\u5b63\u53d1\u552e",
+        "newsClass": 1,
+        "channelCode": 10009,
+        "newsKindList": ["164446", "255952", "10152"],
+        "kindName": "\u79d1\u9686\u6e38\u620f\u5c55",
+        "newsDate": "2015-08-05 11:18:01",
+        "newsLead": "\u301017173\u4e13\u7a3f\uff0c\u8f6c\u8f7d\u8bf7\u6ce8\u660e\u51fa\u5904\u3011\n\u3000\u3000\u57282015\u79d1\u9686\u6e38\u620f\u5c55\u7684\u5fae\u8f6f\u53d1\u5e03\u4f1a\u4e0a\uff0c\u5fae\u8f6f\u5728Xbox\u53d1\u5e03\u4f1a\u63a5\u8fd1...",
+        "newsPic": "http:\/\/i2.17173cdn.com\/z6mhfw\/2015\/news\/2015\/08\/05\/lzy0805gh03.jpg!a-3-480x.jpg",
+        "isMulti": true,
+        "newsAuthor": "\u4e00\u4eba\u4e00\u5251",
+        "newsUrl": "http:\/\/news.17173.com\/content\/2015-08-05\/20150805111801485_1.shtml",
+        "haveVideo": true
+    }]
+}

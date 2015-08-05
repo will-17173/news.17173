@@ -1,0 +1,29 @@
+{
+  "name": "news.17173.com",
+  "version": "1.0.0",
+  "homepage": "https://github.com/will-17173/news.17173",
+  "authors": [
+    "iwill-17173 <huangzhaojian@gmail.com>"
+  ],
+  "description": "新闻中心",
+  "main": "index.js",
+  "keywords": [
+    "17173",
+    "新闻中心"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "www/js/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "swiper": "~3.1.0",
+    "spin.js": "~2.3.2",
+    "fastclick": "~1.0.6"
+  }
+}
