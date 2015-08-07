@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="<?php echo $channelVars['keywords']?>" />
+    <meta name="description" content="<?php echo $channelVars['description']?>" />
+    <meta name="apple-mobile-web-app-title" content="<?php echo $channelVars['web-app-title']?>">
+    <link rel="apple-touch-icon-precomposed" href="<?php echo $channelVars['touch-icon']?>">
+    <title><?php echo $newsInfo->newsTitle ?></title>
+    <!--#include virtual="/inc-site/m-head-begin.shtml" wait="yes"-->
+    <link rel="stylesheet" href="http://ue.17173cdn.com/cache/m/index/2013/reset.css">
+    <link rel="stylesheet" href="http://ue.17173cdn.com/a/news/final/2014/m/css/layout.css">
+    <script src="js/lib.js"></script>
+    <script src="http://ue.17173cdn.com/a/lib/pandora.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="http://ue.17173cdn.com/a/lib/vda/seed.js"></script>
+    <!--#include virtual="/inc-site/m-head-end.shtml" wait="yes"-->
+</head>
+
+<body>
+    <!--#include virtual="/inc-site/m-body-begin.shtml" wait="yes"-->
+    <div class="wrapper" id="page_article">
+        <header class="header">
+            <a href="/" class="logo"><img src="http://ue1.17173cdn.com/a/lib/logo/normal-s.png" alt="" class="logo-img-sub" /></a>
+            <div class="pn-crumb"><a href="/"><?php echo $channelVars['channel-name']?></a><span class="sep">&gt;</span>
+                <a href="javascript:;" class="type-name"><?php echo $newsInfo->kindName ?></a><span class="sep">&gt;</span><span class="cur">正文</span> </div>
+        </header>
+        <!-- end.header -->
+        <div class="content">
+        	<div id="adMobileNewsFirstBanner"></div>
+            <article class="pn-art">
+                <header class="art-hd">
+                    <h1 class="art-tit"><?php echo $newsInfo->newsTitle ?></h1>
+                    <div class="art-info"> <span class="date"><?php echo $newsInfo->newsDate ?></span> <span class="author">作者：<?php echo $newsInfo->newsAuthor ?> </span> </div>
+                </header>
+
+				<?php
+                $giftList = $newsInfo->giftList;
+                if(!empty($giftList)) {
+                ?>
+                        <div class="fahao">
+                            <?php
+                            foreach($giftList as $gift) {
+                            ?>
+                                <a target="_blank" href="<?=$gift['gift_url']?>" class="fahao-item"><?=$gift['gift_name']?></a>
+                            <?php
+                            }
+                            ?>
+                        </div>
+                <?php
+                }
+                ?>
+
+                <div class="art-bd">
+                	<div class="art-bd-html">
+                	<?php echo $newsInfo->newsContentHTML ?>
+                	</div>
+                </div>
+            </article>
+            <!--end the pn-art-->
+            <div class="pn-vote">
+                <div data-component="vote" data-voteid="8567">
+                    <h3>投票</h3>
+                    <div class="vote-meta"><span>3130</span>人参与投票</div>
+                    <dl class="vote-main">
+                        <dt>对这类型任务的你的看法是？</dt>
+                        <dd data-itemid="44333"><span>1.</span>游戏就是游戏，什么任务都可以</dd>
+                        <dd data-itemid="44334"><span>2.</span>没下限，教坏小朋友不好</dd>
+                        <dd data-itemid="44335"><span>3.</span>哥做任务从来不看剧情啊！</dd>
+                        <dd data-itemid="44336"><span>4.</span>求人肉料理的菜谱</dd>
+                        <dd data-itemid="44337"><span>5.</span>求更没下限的任务！</dd>
+                    </dl>
+                    <dl class="vote-result">
+                        <dt>对这类型任务的你的看法是？</dt>
+                        <dd data-itemid="44333"><span>1.</span>游戏就是游戏，什么任务都可以
+                            <div class="votes"><span class="nums" style="width:{{percent}}"></span>{{percent}}</div>
+                            <ins>已投票</ins>
+                        </dd>
+                        <dd data-itemid="44334"><span>2.</span>没下限，教坏小朋友不好
+                            <div class="votes"><span class="nums" style="width:{{percent}}"></span>{{percent}}</div>
+                            <ins>已投票</ins>
+                        </dd>
+                        <dd data-itemid="44335"><span>3.</span>哥做任务从来不看剧情啊！
+                            <div class="votes"><span class="nums" style="width:{{percent}}"></span>{{percent}}</div>
+                            <ins>已投票</ins>
+                        </dd>
+                        <dd data-itemid="44336"><span>4.</span>求人肉料理的菜谱
+                            <div class="votes"><span class="nums" style="width:{{percent}}"></span>{{percent}}</div>
+                            <ins>已投票</ins>
+                        </dd>
+                        <dd data-itemid="44337"><span>5.</span>求更没下限的任务！
+                            <div class="votes"><span class="nums" style="width:{{percent}}"></span>{{percent}}</div>
+                            <ins>已投票</ins>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <!-- end.pn-vote -->
+            <div class="pn-vote" data-component="vote" data-voteid="8567">
+                <h3>投票</h3>
+                <div class="vote-meta"><span>3130</span>人参与投票</div>
+                <dl class="vote-main" style="display: none;">
+                    <dt>对这类型任务的你的看法是？</dt>
+                    <dd data-itemid="44333"><span>1.</span>游戏就是游戏，什么任务都可以</dd>
+                    <dd data-itemid="44334"><span>2.</span>没下限，教坏小朋友不好</dd>
+                    <dd data-itemid="44335"><span>3.</span>哥做任务从来不看剧情啊！</dd>
+                    <dd data-itemid="44336"><span>4.</span>求人肉料理的菜谱</dd>
+                    <dd data-itemid="44337"><span>5.</span>求更没下限的任务！</dd>
+                </dl>
+                <dl class="vote-result" style="display: block;">
+                    <dt>对这类型任务的你的看法是？</dt>
+                    <dd data-itemid="44333"><span>1.</span>游戏就是游戏，什么任务都可以
+                        <div class="votes"><span class="nums" style="width:18%"></span>18%</div>
+                        <ins>已投票</ins>
+                    </dd>
+                    <dd data-itemid="44334"><span>2.</span>没下限，教坏小朋友不好
+                        <div class="votes"><span class="nums" style="width:15%"></span>15%</div>
+                        <ins>已投票</ins>
+                    </dd>
+                    <dd data-itemid="44335"><span>3.</span>哥做任务从来不看剧情啊！
+                        <div class="votes"><span class="nums" style="width:29%"></span>29%</div>
+                        <ins>已投票</ins>
+                    </dd>
+                    <dd data-itemid="44336"><span>4.</span>求人肉料理的菜谱
+                        <div class="votes"><span class="nums" style="width:35%"></span>35%</div>
+                        <ins>已投票</ins>
+                    </dd>
+                    <dd data-itemid="44337"><span>5.</span>求更没下限的任务！
+                        <div class="votes"><span class="nums" style="width:10%"></span>10%</div>
+                        <ins>已投票</ins>
+                    </dd>
+                </dl>
+            </div>
+            <!-- end.pn-vote -->
+            <!--#include virtual="inc-about.shtml" -->
+            <div class="pn-share">
+                <div class="share-box"></div>
+            </div>
+            <!-- end.pn-share -->
+            <div class="pn-atlas">
+                <div class="atlas">
+                    <div class="atlas-imgarea">
+                        <img src="http://ue2.17173cdn.com/a/news/final/2014/m/img/img.jpg" alt="">
+                        <span class="img-info"><i class="ico-img-multi"></i>图集</span>
+                    </div>
+                    <a class="btn-downloader" href="#">
+                        <i class="ico-download"></i>下载游戏头条，看更多 《巫医3》 图片
+                    </a>
+                </div>
+            </div>
+            <!-- end.pn-atlas -->
+            <div class="pn-atlas">
+                <div class="atlas">
+                    <div class="atlas-pictt">
+                        <div class="pic"><img src="http://ue2.17173cdn.com/a/news/final/2014/m/img/img1.jpg" alt=""></div>
+                        <div class="text">
+                            <p>不一样的西游路 梦幻2新资料片异兽奇兵上线</p>
+                        </div>
+                    </div>
+                    <a class="btn-downloader btn-downloader-ex" href="#">
+                        <i class="ico-download"></i>下载游戏头条，了解更多
+                    </a>
+                </div>
+            </div>
+            <!-- end.pn-atlas -->
+            <div class="comm-case gb-final-box-about2">
+                <div class="comm-case-hd">
+                    <h2 class="tit">关于<em><a href="#">剑网3</a>,<a href="#">剑网3</a></em>的新闻</h2></div>
+                <div class="comm-case-bd">
+                    <ul class="list-about">
+                        <li>
+                            <div class="tit"><a href="#">激萌大冒险激萌大冒险内测今日14时开启激萌大冒险激萌大冒险内测今日14时开启</a></div>
+                        </li>
+                        <li>
+                            <div class="tit"><a href="#">激萌大冒险内测今日14时开启</a></div>
+                        </li>
+                        <li>
+                            <div class="tit"><a href="#">激萌大冒险内测今日14时开启</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end.gb-final-box-about2 -->
+            <div class="gb-final-box-about3">
+                <ul class="list-news list-news-ex">
+                    <li>
+                        <a href="#">
+                            <figure class="c1">
+                                <img src="http://ue.17173cdn.com/a/news/final/2014/m/img/img-160-90.jpg" alt="" width="160" height="90">
+                            </figure>
+                            <section class="c2">
+                                <h3 class="tit">地下城与勇士</h3>
+                                <p class="desc"><span>类型: 大型角色扮演</span></p>
+                                <p class="desc"><span>题材: 武侠</span> <span>画面: 3D</span></p>
+                            </section>
+                            <span class="c3"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <figure class="c1">
+                                <img src="http://ue.17173cdn.com/a/news/final/2014/m/img/img-160-90.jpg" alt="" width="160" height="90">
+                            </figure>
+                            <section class="c2">
+                                <h3 class="tit">地下城与勇士</h3>
+                                <p class="desc"><span>类型: 大型角色扮演</span></p>
+                                <p class="desc"><span>题材: 武侠</span> <span>画面: 3D</span></p>
+                            </section>
+                            <span class="c3"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- end.gb-final-box-about3 -->
+            <div class="comm-case gb-final-box-hot">
+                <div class="comm-case-hd">
+                    <h2 class="tit">热门新闻排行</h2></div>
+                <div class="comm-case-bd">
+                    <ul class="list-about list-about-ex gb-final-js-rank">
+                        <li><span class="num"></span>
+                            <div class="tit"><a href="#">激萌大冒险激萌大冒险内测今日14时开启激萌大冒险激萌大冒险内测今日14时开启</a></div>
+                        </li>
+                        <li><span class="num"></span>
+                            <div class="tit"><a href="#">激萌大冒险内测今日14时开启</a></div>
+                        </li>
+                        <li><span class="num"></span>
+                            <div class="tit"><a href="#">激萌大冒险内测今日14时开启</a></div>
+                        </li>
+                        <li><span class="num"></span>
+                            <div class="tit"><a href="#">激萌大冒险内测今日14时开启</a></div>
+                        </li>
+                        <li><span class="num"></span>
+                            <div class="tit"><a href="#">激萌大冒险内测今日14时开启</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end.gb-final-box-hot -->
+
+
+            <!--#include virtual="inc-recomm.shtml" -->
+
+
+        </div>
+        <!--end.content-->
+        <div class="pn-comment" id="comment">
+            <div id="SOHUCS" sid="<?php echo $newsInfo->newsID ?>_<?php echo $newsInfo->newsClass ?>_<?php echo $channelVars["channelCode"];?>"></div>
+        </div>
+        <!--end.pn-comment-->
+        <footer class="footer">
+            <p class="box-switch-platform"><a href="#">手机版 </a><span class="sep">|</span><a href="#">电脑版 </a></p>
+            <p class="version-c2 box-copyright">Copyright &copy; 2001-2015 17173.com</p>
+        </footer>
+        <div class="fixed-box">
+            <a href="javascript:;" class="btn-index">返回首页</a>
+            <a href="javascript:;" class="btn-top">回到顶部</i></a>
+        </div>
+        <!-- end.fixed-box -->
+    </div>
+    <!--end.wrapper-->
+	<div id="page_gallery" style="display:none;">
+		<div class="wrapper wp-gallery">
+			<div class="content">
+				<div class="gallery-pn" id="slideshow">
+	                <a href="javascript:;" class="view-pic" target="_blank">查看原图</a>
+					<a href="javascript:;" data-rel="back" class="gallery-back"><i class="ico-gallery-back"></i></a>
+					<div class="gallery-pn-in swiper-container gallery">
+						<ul class="gallery-list swiper-wrapper">
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/x-dot-template" id="vote_template">
+		<div class="pn-vote"> 
+		  <div data-voteid="{{voteid}}">
+		    <h3>投票</h3>
+		    <div class="vote-meta"><span>{{totalnum}}</span>人参与投票</div>
+		    <dl class="vote-main">
+		      <dt>{{votetitle}}</dt>
+		      <dt>{{title}}</dt>
+		      {{#each itemlist}}
+		      <dd data-itemid="{{itemid}}" data-itemnum="{{itemnum}}"><span>{{plusOne @index}}.</span>{{itemtitle}}</dd>
+		      {{/each}}
+		    </dl>
+		    <dl class="vote-result">
+		      <dt>{{title}}</dt>
+		      {{#each itemlist}}
+		      <dd data-itemid="{{itemid}}" data-itemnum="{{itemnum}}"><span>{{plusOne @index}}.</span>{{itemtitle}}<div class="votes"><span class="nums"></span><span class="itemnum">{{itemnum}}</span></div></dd>
+		      {{/each}}
+		    </dl>
+		  </div>
+		</div>
+	</script>
+
+	<script type="text/javascript">
+	// var _config = {
+	// 	channelCode: '<?php echo $channelVars["channelCode"];?>',
+	// 	localStorageId: '<?php echo $channelVars["localStorageId"];?>',
+	// 	defaultKind: '<?php echo $channelVars["defaultKind"];?>',
+	// 	sid: '<?php echo $newsInfo->newsID ?>' + '_1_' + '<?php echo $channelVars["channelCode"];?>',
+	// 	type: '<?php echo $newsInfo->kindName ?>',
+	// 	kind: '<?php echo isset($newsInfo->newsKindList[0])?$newsInfo->newsKindList[0]:'' ?>',
+	// 	kindList: <?php echo json_encode($newsInfo->newsKindList);?>
+	// }
+
+	var _config = {
+		channelCode: '10009',
+		localStorageId: 'news.17173.addtohome',
+		defaultKind: '[{"channelCode":10009,"newsKind":"10019,10181,10152,10161"}]',
+		sid: '4003016' + '_1_' + '10009',
+		type: 'ChinaJoy最新消息',
+		kind: '256598',
+		kindList: ["256598","10234","10307","255952"]
+	}
+	</script>
+    <script src="js/vendor.js"></script>
+    <script src="js/page-content.js"></script>
+    <script src="http://www.17173.com/2015/new/admobilenewsfirstbanner.js"></script>
+	<script src="http://news.17173.com/2015/m/m-detail-event.js"></script>
+    <!--#include virtual="/inc-site/m-footer.shtml" wait="yes"-->
+    <!--#include virtual="/inc-site/m-body-end.shtml" wait="yes"-->
+</body>
+</html>

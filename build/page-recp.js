@@ -84,10 +84,10 @@ var app = {
 			new Listview({
 			    element: '#player_swiper .list-news:eq(' + i + ')',
 			    template: '#listview_template',
-			    dataUrl: '/dd.json',
+			    dataUrl: '/d.json',
 			    showLoading: false,
 			    queryParams: '[{"channelCode":"' + channelCode + '","newsKind":"' + newsKind + '"}]',
-			    more: '.btn-more', //TODO
+			    more: '.btn-more',
 			    callback: function(){
 			        var commentInfo2 = new CommentInfo({
 					    commentItem: '.js-comment-item2',

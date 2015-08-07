@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" > 
+<meta name="format-detection" content="telephone=no">
+<title>新闻 列表 </title>
+<!--#include virtual="/inc-site/m-head-begin.shtml" wait="yes"-->
+<link rel="stylesheet" href="http://ue.17173cdn.com/a/lib/reset-m-1.1.css">
+<link rel="stylesheet" href="http://ue.17173cdn.com/a/news/final/2015/m/css/style.css">
+<script src="js/lib.js"></script>
+<script type="text/javascript" src="http://ue8.17173.itc.cn/cache/lib/v2/ue/commentinfo/commentinfo.js" charset="utf-8"></script>
+<!--#include virtual="/inc-site/m-head-end.shtml" wait="yes"-->
+</head>
+<body>
+	<!--#include virtual="/inc-site/m-body-begin.shtml" wait="yes"-->
+	<nav class="nav">
+		<ul class="nav-list">
+			<li >
+				<a href="javascript:;">头条</a>
+			</li>
+			<li>
+				<a href="javascript:;">游戏</a>
+			</li>
+			<li>
+				<a href="javascript:;">玩家</a>
+			</li>
+			<li>
+				<a href="javascript:;">大观</a>
+			</li>
+			<li>
+				<a href="javascript:;">专题</a>
+			</li>
+		</ul>
+	</nav>
+	<div class="content">
+
+
+
+		<section class="comm-mod">
+			<header class="comm-mod-hd">
+				<h2 class="tit" data-channelCode="10009" data-newsKind="44444" id="play_list"></h2>
+			</header>
+			<div class="comm-mod-bd">
+				<ul class="list-news list-news-ex" id="player_news">
+
+				</ul>
+			</div>
+		</section>
+		<a href="javascript:;" class="btn-more">查看更多</a>
+	</div>
+	<!--#include virtual="inc/inc-footer.shtml" wait="yes"-->
+	<footer class="footer">
+		<div class="mod-platform">
+			<a href="/?__stay_on_pc">
+				<i class="ico-pc"></i>
+				电脑版
+			</a>
+			<a href="/">
+				<i class="ico-mobile"></i>
+				手机版
+			</a>
+		</div>
+		<div class="copyright">Copyright &copy; 2001-2015 17173. All rights reserved. </div>
+		<a href="javascript:;" class="btn-gotop"></a>
+	</footer>
+	<a href="javascript:;" class="btn-gotop" style="display: inline;"></a>
+	<!--#include virtual="inc/inc-footer.shtml" wait="yes"-->
+	<script type="text/x-dot-template" id="listview_template">
+		{{ for(var i = 0; i < it.length; i++){ }}
+		{{var date = it[i].newsDate.split(' ')[0];}}
+		<li>
+			<a href="{{=it[i].newsUrl}}">
+				<figure class="c1">
+					<img src="{{=it[i].newsPic}}" alt="" />
+					<i class="ico-play"></i>
+				</figure>
+				<section class="c2">
+					<h3 class="tit"><span class="tag">专题</span>{{=it[i].newsTitle}}</h3>
+					<p class="date">{{=date}}</p>
+					<p class="number js-comment-item2" data-topicid="{{=it[i].newsID}}_{{=it[i].newsClass}}_{{=it[i].channelCode}}"><span class="js-comment-count">0</span><i class="ico-comment"></i></p>
+				</section>
+			</a>
+		</li>
+		{{ } }}
+	</script>
+	<script src="js/vendor.js"></script>
+	<script src="js/page-list.js"></script>
+
+	<!--#include virtual="/inc-site/m-footer.shtml" wait="yes"-->
+	<!--#include virtual="/inc-site/m-body-end.shtml" wait="yes"-->
+</body>
+</html>
+

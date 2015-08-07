@@ -1,14 +1,17 @@
+'use strict';
+
 var app = {
 	init: function(){
 		this.swiper();
 		this.gotop();
 		this.getList();
+		this.bindEvents();
 	},
 	bindEvents: function(){
 		FastClick.attach(document.body);
 		$('.btn-gotop').click(function(){
 			$(document).scrollTop(0);
-		})
+		});
 		$(window).scroll(function(){
 			app.gotop();
 		});
@@ -29,10 +32,10 @@ var app = {
 		    	commentInfo2.init();
 		    	$('.js-comment-item2').removeClass('js-comment-item2');
 		    }
-		})
+		});
 	},
 	swiper: function(){
-		var focusSwiper = $('#swiper_focus').swiper({
+		$('#swiper_focus').swiper({
 			autoplay:4000,
 			mode:'horizontal',
 			loop: true,
@@ -42,15 +45,15 @@ var app = {
 	},
 	gotop: function(){
 		var y = $(window).scrollTop(),
-			h_header = $('.header').height();
+			header = $('.header').height();
 
-		if(y > h_header){
+		if(y > header){
 			$('.btn-gotop').fadeIn();
 		}else{
 			$('.btn-gotop').fadeOut();
 		}
 	}
-}
+};
 
 app.init();
 
